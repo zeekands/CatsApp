@@ -41,8 +41,8 @@ hilt {
 }
 
 dependencies {
-    api project(":app")
-    api project(":core")
+    implementation project(":app")
+    implementation project(":core")
     implementation 'com.google.dagger:hilt-android:2.33-beta'
     kapt 'com.google.dagger:hilt-android-compiler:2.33-beta'
 }

@@ -46,7 +46,7 @@ hilt {
 }
 
 dependencies {
-    api project(":core")
+    implementation project(":core")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //room database
     implementation "androidx.room:room-runtime:$room_version"
