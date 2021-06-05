@@ -1,0 +1,67 @@
+dependencies {
+//kotlin
+    implementation "androidx.core:core-ktx:$coreVersion"
+
+//ui
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation "androidx.cardview:cardview:$cardViewVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation "com.gauravk.bubblenavigation:bubblenavigation:$bubble_navigation_version"
+    implementation "com.github.clans:fab:$custom_fab_version"
+    implementation "com.makeramen:roundedimageview:$riv_version"
+    implementation "com.miguelcatalan:materialsearchview:$material_search_view_version"
+
+//testing
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$idleResourceVersion"
+    testImplementation "org.mockito:mockito-inline:2.13.0"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3'
+    testImplementation "com.google.truth:truth:1.1.2"
+
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "com.google.truth:truth:1.1.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation "org.mockito:mockito-core:2.23.0"
+    androidTestImplementation "androidx.test:runner:$androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+
+//lazy provides viewmodel
+    implementation "androidx.activity:activity-ktx:${activityVersion}"
+    implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
+
+//coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+
+// Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$viewModelVersion"
+
+//retrofit for api
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+//okhtttp3
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+// Dagger-Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
+}

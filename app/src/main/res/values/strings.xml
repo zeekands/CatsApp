@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CatsApp</string>
+    <string name="Cats">Cats</string>
+    <string name="Favourite">Favourite</string>
+    <string name="no_data">No Data</string>
+    <string name="title_favourite">FavouriteCats</string>
+    <string name="backbutton">back_button</string>
+    <string name="overview">Detail</string>
+    <string name="loremIpsum">Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.</string>
+    <string name="temperament">Temperament</string>
+    <string name="temperament_text">Affectionate, Social, Intelligent, Loyal</string>
+</resources>

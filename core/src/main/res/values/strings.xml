@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="poster1">GTA V</string>
+    <string name="dummyTitle">GTA V</string>
+    <string name="dummyDate">10 maret 2001</string>
+    <string name="popularity_d">popularity</string>
+    <string name="dummyUserScore">5</string>
+    <string name="no_data">Tidak Ada Gambar</string>
+</resources>
