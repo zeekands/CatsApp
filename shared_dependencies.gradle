@@ -12,10 +12,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
-    implementation "com.gauravk.bubblenavigation:bubblenavigation:$bubble_navigation_version"
     implementation "com.github.clans:fab:$custom_fab_version"
     implementation "com.makeramen:roundedimageview:$riv_version"
-    implementation "com.miguelcatalan:materialsearchview:$material_search_view_version"
 
 //testing
     testImplementation "junit:junit:$junitVersion"
@@ -27,7 +25,6 @@ dependencies {
     testImplementation "com.google.truth:truth:1.1.2"
 
     androidTestImplementation "junit:junit:4.13.2"
-    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:2.12.1"
     androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3"
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
     androidTestImplementation "com.google.truth:truth:1.1.2"
