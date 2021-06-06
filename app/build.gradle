@@ -36,6 +36,9 @@ android {
     buildFeatures {
         viewBinding true
     }
+    lintOptions {
+        checkReleaseBuilds false
+    }
     kapt {
         useBuildCache true
     }
