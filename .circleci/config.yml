@@ -2,7 +2,12 @@ version: 2.1
  
 orbs:
   android: circleci/android@0.2.1
- 
+
+general:
+  artifacts:
+    - "build/libs/*.jar"
+    - "build/distributions/*.zip"
+    
 jobs:
   build:
     executor: android/android
