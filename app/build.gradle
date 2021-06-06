@@ -36,9 +36,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-    lintOptions {
-        checkReleaseBuilds false
-    }
     kapt {
         useBuildCache true
     }
@@ -46,9 +43,6 @@ android {
         preDexLibraries true
     }
     dynamicFeatures = [':favourite']
-}
-hilt {
-    enableExperimentalClasspathAggregation = true
 }
 
 dependencies {
