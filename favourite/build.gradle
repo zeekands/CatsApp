@@ -35,9 +35,7 @@ android {
         checkReleaseBuilds false
     }
 }
-hilt {
-    enableExperimentalClasspathAggregation = true
-}
+
 
 dependencies {
     implementation project(":app")
