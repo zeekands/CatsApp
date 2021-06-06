@@ -39,6 +39,12 @@ android {
     lintOptions {
         checkReleaseBuilds false
     }
+    kapt {
+        useBuildCache true
+    }
+    dexOptions {
+        preDexLibraries true
+    }
     dynamicFeatures = [':favourite']
 }
 hilt {
