@@ -65,9 +65,6 @@ class CatsFragment : Fragment() {
                 }
                 is Resource.Success -> {
                     catsAdapter.setData(cat.data)
-                    cat.data?.forEach {
-                        it.name?.let { it1 -> Log.d("dataku", it1) }
-                    }
                     binding.progressBar.visibility = View.GONE
                     binding.notFoundText.visibility = View.GONE
                 }

@@ -15,6 +15,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -29,16 +32,26 @@ object CoreModule {
     @Provides
     fun provideBaseURl() = Constant.BASE_URL
 
+
     @Singleton
     @Provides
     fun providesOkHttpClient() = run {
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
+        val hostname = "thecatapi.com"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/BRLkuw7PJ+gTJF8jGT44hom5l2ccwZg4emp8Pc+2ZV4=")
+            .add(hostname, "sha256/JSMzqOOrtyOT1kmau6zKhgT676hGgczD5VMdRMyJZFA=")
+            .add(hostname, "sha256/++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=")
+            .add(hostname, "sha256/KwccWaCgrnaw6tsrrSO61FgLacNgG2MMLq8GE6+oP5I=")
+            .build()
+
         OkHttpClient.Builder()
             .addInterceptor(interceptor)
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
 
@@ -58,8 +71,11 @@ object CoreModule {
 
     @Singleton
     @Provides
-    fun provideGamesService(retrofit: Retrofit): ApiService =
+    fun provideCatsService(retrofit: Retrofit): ApiService =
         retrofit.create(ApiService::class.java)
+
+    val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
+    val factory = SupportFactory(passphrase)
 
     @Singleton
     @Provides
@@ -69,11 +85,13 @@ object CoreModule {
         app,
         CatsDatabase::class.java,
         "favourite_db.db"
-    ).build()
+    ).fallbackToDestructiveMigration()
+        .openHelperFactory(factory)
+        .build()
 
     @Singleton
     @Provides
-    fun provideFavouriteGameDao(db: CatsDatabase) = db.catsDao()
+    fun provideFavouriteCatDao(db: CatsDatabase) = db.catsDao()
 
     @Singleton
     @Provides
