@@ -31,7 +31,7 @@ class CatAdapter : RecyclerView.Adapter<CatAdapter.CatViewHolder>() {
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun getSwipedData(swipedPosition: Int): Cat = listData[swipedPosition]
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CatViewHolder {
         val itemRecyclerviewBinding =

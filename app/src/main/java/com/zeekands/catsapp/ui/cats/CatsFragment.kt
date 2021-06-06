@@ -28,7 +28,7 @@ class CatsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _fragmentGamesBinding = CatsFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

@@ -36,6 +36,7 @@ buildscript {
         custom_fab_version = "1.6.4"
         riv_version = "2.3.0"
         material_search_view_version = "1.4.0"
+        leakCanaryVersion = "2.4"
     }
     repositories {
         google()

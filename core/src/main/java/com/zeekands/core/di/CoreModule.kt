@@ -8,7 +8,6 @@ import com.zeekands.core.data.source.local.room.CatsDao
 import com.zeekands.core.data.source.local.room.CatsDatabase
 import com.zeekands.core.data.source.remote.RemoteDataSource
 import com.zeekands.core.data.source.remote.network.ApiService
-import com.zeekands.core.domain.repository.ICatRepository
 import com.zeekands.core.utils.AppExecutors
 import com.zeekands.core.utils.Constant
 import dagger.Module
