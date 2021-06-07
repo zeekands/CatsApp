@@ -74,7 +74,7 @@ object CoreModule {
     fun provideCatsService(retrofit: Retrofit): ApiService =
         retrofit.create(ApiService::class.java)
 
-    val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
+    private val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
     val factory = SupportFactory(passphrase)
 
     @Singleton

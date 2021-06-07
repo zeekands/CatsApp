@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles 'proguard-rules.pro'
         }
     }
@@ -52,6 +52,8 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
+    implementation "androidx.paging:paging-common-ktx:3.0.0"
+    implementation "androidx.paging:paging-runtime-ktx:3.0.0"
     implementation "net.zetetic:android-database-sqlcipher:4.4.0"
     implementation "androidx.sqlite:sqlite-ktx:2.1.0"
 }

@@ -28,7 +28,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles 'proguard-rules.pro'
         }
     }
     lintOptions {
@@ -40,6 +39,4 @@ android {
 dependencies {
     implementation project(":app")
     implementation project(":core")
-    implementation 'com.google.dagger:hilt-android:2.33-beta'
-    kapt 'com.google.dagger:hilt-android-compiler:2.33-beta'
 }
